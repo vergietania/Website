@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vergie Tania Creative Journal</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Creative Process Journal</h1>
+            <div class="box author-name">Vergie Tania</div>
+            <div class="box class-name">BADC5D</div>
+
+            
+
+            <section class="container">
+     <h2 class="toggle" data-target="overview-chat">Overview</h2>
+     <div class="chat-box" id="overview-chat">
+        
+         <p>The project is called Rupa Rasa where I will dive deeper about Indonesian traditional snacks. The name Rupa means appearance or form and Rasa means taste, together they mean form and taste. In this journal,  I will explore and experiment different outcomes to highlight that traditional snacks are the main star of the meal.</p>
+     </div>
+       
+     <h2 class="toggle" data-target="sem1-chat">Semester 1</h2>
+     <div class="chat-box" id="sem1-chat">
+    <a href="Week1.html">Week 1</a>
+    <a href="week2.html">Week 2</a>
+    <a href="week3.html">Week 3</a>
+    <a href="week4.html">Week 4</a>
+    <a href="week5.html">Week 5</a>
+    <a href="week6.html">Week 6</a>
+    <hr>
+     </div>
+
+     <h2 class="toggle" data-target="sem2-chat">Semester 2</h2>
+     <div class="chat-box" id="sem2-chat">
+         <p></p>
+     </div>
+  
+</div>
+</section>
+
+            </main>
+        
+       <script>
+    const toggles = document.querySelectorAll(".toggle");
+
+    toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            const targetId = toggle.getAttribute("data-target");
+            const chatBox = document.getElementById(targetId);
+            chatBox.classList.toggle("active");
+            const toggles = document.querySelectorAll(".toggle");
+        });
+    });
+</script>
+
+    </body>
+</html>

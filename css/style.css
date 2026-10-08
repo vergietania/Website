@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #FAF9F6;
+}
+
+h1 {
+    white-space: nowrap;
+    position: absolute;
+    top: 50px;
+    left: 26px;
+    margin: 0;
+    font-size: 100px;
+    color: #31231E;
+}
+
+.container {
+    position: absolute;
+    bottom: 2px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.chat-box {
+    display: none;
+    background-color: transparent;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.chat-box.active {
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+
+.author-name{
+    position: absolute;
+    left: 650px;
+    top: 170px;
+    color: #31231E;
+}
+.class-name{
+  position: absolute;
+    left: 1020px;
+    top: 170px;
+    color: #31231E;   
+}
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;     /* so background only wraps the text, not the full width */
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle.active {
+    background-color: #E9C46A;   /* pick your highlight color */
+    color: #333;                  /* dark text reads better on a bright highlight */
+}
+
+h2 {
+    color: #31231E;;
+    transition: color 0.3s ease;
+}
+h2:hover {
+    color: #84714f;
+}
+
+#sem1-chat {
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    border-radius: 0;
+}
+.container hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid white;   /* pick a color that fits your dark brown background */
+    margin: 8px 0;
+}
+#sem1-chat hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid brown;
+    margin: 8px 0;
+}
+#sem1-chat.active {
+    display: flex;
+}
+
+.chat-box a {
+    display: inline-block;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+#overview-chat {
+    max-width: 600px;      /* keeps line length readable, not stretched too wide */
+    font-size: 18px;       /* bigger, easier to read */
+    line-height: 1.7;      /* more space between lines */
+}
+
+#overview-chat p {
+    margin: 0;
+}
+
