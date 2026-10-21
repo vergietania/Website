@@ -10,18 +10,22 @@
 
         </header>
         <main>
-            <h1>Creative Process Journal</h1>
-            <div class="box author-name">Vergie Tania</div>
-            <div class="box class-name">BADC5D</div>
-
-            
+           <div class="title-block">
+    <h1>Creative Process Journal</h1>
+    <div class="box author-name">Vergie Tania</div>
+    <div class="box class-name">BADC5D</div>
+</div>
+            <section class="drawing">
+                <img src="people.png" width="800px">
+            </section>
 
             <section class="container">
      <h2 class="toggle" data-target="overview-chat">Overview</h2>
-     <div class="chat-box" id="overview-chat">
-        
-         <p>The project is called Rupa Rasa where I will dive deeper about Indonesian traditional snacks. The name Rupa means appearance or form and Rasa means taste, together they mean form and taste. In this journal,  I will explore and experiment different outcomes to highlight that traditional snacks are the main star of the meal.</p>
-     </div>
+   <div class="chat-box" id="overview-chat">
+    <p>The project is called Rupa Rasa, where I will dive deeper into Indonesian traditional snacks.</p>
+    <p>The name Rupa means appearance or form and Rasa means taste. Together, they mean form and taste.</p>
+    <p>In this journal, I will explore and experiment with different outcomes to highlight that traditional snacks are the main star of the meal.</p>
+</div>
        
      <h2 class="toggle" data-target="sem1-chat">Semester 1</h2>
      <div class="chat-box" id="sem1-chat">
@@ -44,15 +48,22 @@
 
             </main>
         
-       <script>
+      <script>
     const toggles = document.querySelectorAll(".toggle");
 
     toggles.forEach((toggle) => {
         toggle.addEventListener("click", () => {
             const targetId = toggle.getAttribute("data-target");
             const chatBox = document.getElementById(targetId);
-            chatBox.classList.toggle("active");
-            const toggles = document.querySelectorAll(".toggle");
+            const isOpen = chatBox.classList.contains("active");
+
+            document.querySelectorAll(".chat-box").forEach(box => box.classList.remove("active"));
+            toggles.forEach(t => t.classList.remove("active"));
+
+            if (!isOpen) {
+                chatBox.classList.add("active");
+                toggle.classList.add("active");
+            }
         });
     });
 </script>
