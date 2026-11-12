@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Week 3</title>
+        <title>Week 4</title>
         <style>
             *{
                 padding: 0;
@@ -85,17 +85,35 @@ figure.img-row figcaption {
 }
         </style>
     </head>
+      </head>
+ <link href="css/header.css" rel="stylesheet">
+    </head>
     <body>
-<div class="container">
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <div class="nav-right">
-            <a href="Week3.html">Back</a>
-            <a href="Week5.html">Next</a>
+   <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropdown-btn">Weeks ▾</button>
+                <div class="dropdown-menu">
+                    <a href="Week1.html">Week 1</a>
+                    <a href="Week2.html">Week 2</a>
+                    <a href="Week3.html">Week 3</a>
+                    <a href="Week4.html">Week 4</a>
+                    <a href="Week5.html">Week 5</a>
+                    <a href="Week6.html">Week 6</a>
+                    <a href="Week7.html">Week 7</a>
+                    <a href="Week8.html">Week 8</a>
+                    <a href="Week9.html">Week 9</a>
+                    <a href="Week10.html">Week 10</a>
+                    <a href="Week11.html">Week 11</a>
+                    <a href="Week12.html">Week 12</a>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+<div class="container">
     <main>
        
         <section>
@@ -141,7 +159,8 @@ figure.img-row figcaption {
         <hr>
          <section>
             <h2>Reflection</h2>
-            <p>This week</p>
+            <p>Luckily, this week was also when we received peer and lecturer feedback to track our progress. I was given a suggestion to explore other media too, not just stick with digital art, so I can broaden my range of research and not rely on my observations. Although my observations during the pasar malam or visiting the food stalls are good insight, having the opportunity to interview the store owners would be more insightful, as they would know more about their target market since they manage the store themselves, so they have more in-depth information.</p>
+            <p>My lecturer also gave helpful comments, and he suggested that I explore different types of media for my critical making. Other than sketching, I could explore sketching on paper to see what works and what doesn’t. At this stage, exploration is crucial; in Semester 2, we would already have a strong compilation of variations and experiments to showcase, so I decided not to limit myself to sketching and to be more open-minded about trying new media.</p>
         </section>
         <hr>
     </main>
@@ -149,5 +168,18 @@ figure.img-row figcaption {
                     <p>Vergie Tania Creative Journal 2026</p>
             </footer>
 </div>
+<script>
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+        dropdownMenu.classList.remove("open");
+    });
+</script>
     </body>
 </html>
